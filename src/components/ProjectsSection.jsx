@@ -1,32 +1,6 @@
 import ProjectCard from "./ProjectCard";
 
-export default function ProjectsSection() {
-  const projects = [
-    {
-      image: "https://via.placeholder.com/400x250",
-      title: "Portfolio Web",
-      description: "Un portfolio moderno hecho con React y TypeScript.",
-      tags: [
-        { name: "React", icon: "⚛️" },
-        { name: "TypeScript", icon: "📘" },
-        { name: "JavaScript", icon: "🟨" },
-        { name: "CSS", icon: "🎨" },
-        { name: "HTML", icon: "📄" },
-        { name: "UX Design", icon: "✨" },
-      ],
-    },
-    {
-      image: "https://via.placeholder.com/400x250",
-      title: "Gestor de tareas",
-      description: "Aplicación simple de tareas con almacenamiento local.",
-      tags: [
-        { name: "JavaScript", icon: "🟨" },
-        { name: "CSS", icon: "🎨" },
-        { name: "HTML", icon: "📄" },
-      ],
-    },
-  ];
-
+export default function ProjectsSection({ projects }) {
   return (
     <div
       style={{
@@ -36,7 +10,25 @@ export default function ProjectsSection() {
       }}
     >
       {projects.map((p, i) => (
-        <ProjectCard key={i} {...p} />
+        <div key={i}>
+          {/* Card resumida */}
+          <ProjectCard {...p} />
+
+          {/* Información extra en detalle (solo aparece en esta sección) */}
+          {p.detailContent && (
+            <div
+              style={{
+                marginTop: "15px",
+                padding: "15px",
+                background: "#fff",
+                borderRadius: "12px",
+                boxShadow: "0 4px 16px rgba(0,0,0,0.08)",
+              }}
+            >
+              {p.detailContent}
+            </div>
+          )}
+        </div>
       ))}
     </div>
   );

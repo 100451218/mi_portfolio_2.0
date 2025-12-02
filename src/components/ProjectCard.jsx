@@ -1,6 +1,16 @@
-export default function ProjectCard({ image, title, description, tags = [] }) {
+export default function ProjectCard({
+  image,
+  title,
+  description,
+  tags = [],
+  onClick,
+}) {
   return (
-    <div className="card" style={{ width: "100%" }}>
+    <div
+      className="card"
+      style={{ width: "100%", cursor: "pointer" }}
+      onClick={onClick}
+    >
       <img
         src={image}
         alt={title}
@@ -8,6 +18,7 @@ export default function ProjectCard({ image, title, description, tags = [] }) {
       />
       <h3 style={{ marginTop: "10px" }}>{title}</h3>
       <p>{description}</p>
+
       <div
         style={{
           display: "flex",

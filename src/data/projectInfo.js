@@ -10,7 +10,14 @@ const projectInfo = [
       title: "Portfolio Web",
       description:
         "Este portfolio muestra mis proyectos y experiencias como informático",
-      tags: [tags.react, tags.typescript, tags.css, tags.html, tags.uxui],
+      tags: [
+        tags.react,
+        tags.typescript,
+        tags.css,
+        tags.html,
+        tags.uxui,
+        tags.javascript,
+      ],
     },
 
     details: {
@@ -51,7 +58,7 @@ const projectInfo = [
         tags.Csharp,
         tags.php,
         tags.javascript,
-        tags.sql,
+        tags.SQL,
         tags.html,
         tags.css,
         tags.uxui,
@@ -110,6 +117,7 @@ const projectInfo = [
         tags.html,
         tags.Front_end,
         tags.uxui,
+        tags.javascript,
       ],
       // Angular, Css, TypeScript, HTML, Android, Front-End,
     },
@@ -156,7 +164,7 @@ const projectInfo = [
       title: "Sistema de mensajería online",
       description:
         "En este proyecto, se desarrolló una arquitectura de cliente-servidor concurrente para un sistema de mensajería",
-      tags: [tags.Cplusplus, tags.pyhton, tags.uxui],
+      tags: [tags.Cplusplus, tags.python, tags.uxui],
       //C++, Python, UX
     },
 
@@ -252,7 +260,7 @@ const projectInfo = [
       image: "https://via.placeholder.com/400x250",
       title: "Chatbot Agenda",
       description: "Chatbot de Telegram que te ayuda a organizar tus estudios",
-      tags: [tags.nodered, tags.java],
+      tags: [tags.nodered],
       // Low-Code, APIS, Java
     },
 

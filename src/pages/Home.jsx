@@ -4,71 +4,9 @@ import ProjectDetails from "../components/ProjectDetails";
 import projectInfo from "../data/projectInfo";
 import EducationCard from "../components/EducationCard";
 import ProjectTagsInfo from "../data/ProjectTagsInfo";
+import { ProjectFilter } from "../components/ProjectFilter";
 
 import { motion, AnimatePresence } from "framer-motion";
-
-// ------------------------------
-// FILTRO — Componente Interno
-// ------------------------------
-function ProjectFilter({ activeTag, onFilter }) {
-  // Calcular cuántos proyectos tiene cada tag
-  const tagCounts = Object.keys(ProjectTagsInfo).reduce((acc, key) => {
-    acc[key] = projectInfo.filter((p) =>
-      p.card.tags.some((t) => t.name === ProjectTagsInfo[key].name)
-    ).length;
-    return acc;
-  }, {});
-
-  return (
-    <div
-      style={{
-        display: "flex",
-        gap: "12px",
-        flexWrap: "wrap",
-        marginBottom: "20px",
-      }}
-    >
-      {Object.keys(ProjectTagsInfo).map((key) => {
-        const tag = ProjectTagsInfo[key];
-
-        return (
-          <div
-            key={key}
-            onClick={() => onFilter(activeTag === key ? null : key)}
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "6px",
-              padding: "8px 12px",
-              borderRadius: "8px",
-              background:
-                activeTag === key
-                  ? "var(--color-accent)"
-                  : "var(--color-surface)",
-              color:
-                activeTag === key ? "white" : "var(--color-text-secondary)",
-              border:
-                activeTag === key
-                  ? "2px solid var(--color-accent)"
-                  : "1px solid var(--color-secondary)",
-              cursor: "pointer",
-              userSelect: "none",
-              transition: "0.25s ease",
-            }}
-          >
-            <img
-              src={tag.icon}
-              alt={tag.name}
-              style={{ width: "18px", height: "18px" }}
-            />
-            <span>{tag.name}</span>
-            <strong>({tagCounts[key]})</strong>
-          </div>
-        );
-      })}
-    </div>
-  );
-}
 
 // ------------------------------
 // HOME PAGE
@@ -110,19 +48,21 @@ export default function Home() {
   // ------------------------------
   const education = [
     {
-      image: "https://via.placeholder.com/120",
+      image:
+        "https://www.uc3m.es/uc3m/media/uc3m/img/grande/reducida700/en-ig_cabecera_vida-universitaria/1371428999250.jpg",
       title: "Grado en Ingeniería Informática",
       subtitle: "Universidad Carlos III de Madrid",
       years: "2020-2024",
     },
     {
-      image: "https://via.placeholder.com/120",
+      image: "https://hea.ie/assets/uploads/2017/04/UL-1000x500.jpg",
       title: "Bachelor's In Computer Engineering",
       subtitle: "University of Limerick (Erasmus +)",
       years: "2023-2024",
     },
     {
-      image: "https://via.placeholder.com/120",
+      image:
+        "https://iesgerardodiego.com/wp-content/uploads/2018/02/ies-gerardo-diego.jpg",
       title: "Bachillerato de Execlencia",
       subtitle: "IES Gerardo Diego",
       years: "2018-2020",

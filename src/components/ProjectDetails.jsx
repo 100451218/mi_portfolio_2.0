@@ -41,6 +41,7 @@ const ProjectDetails = forwardRef(({ projects }, ref) => {
 
       {/* CONTENIDO DETALLADO */}
       <div
+        className="scrollable"
         style={{
           flex: 1,
           maxHeight: "400px",

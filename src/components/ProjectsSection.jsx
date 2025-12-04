@@ -6,7 +6,7 @@ export default function ProjectsSection({ projects }) {
       style={{
         display: "grid",
         gap: "20px",
-        gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+        gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
       }}
     >
       {projects.map((p, i) => (

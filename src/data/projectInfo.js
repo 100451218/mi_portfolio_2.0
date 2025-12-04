@@ -10,7 +10,7 @@ const projectInfo = [
       title: "Portfolio Web",
       description:
         "Este portfolio muestra mis proyectos y experiencias como informático",
-      tags: [tags.javascript, tags.react, tags.css],
+      tags: [tags.react, tags.typescript, tags.css, tags.html, tags.uxui],
     },
 
     details: {
@@ -45,7 +45,17 @@ const projectInfo = [
       title: "Gamificación de Deporte",
       description:
         "En este proyecto se desarrolló una aplicación web y un videojuego para fomentar el deporte de manera divertida",
-      tags: [tags.placeholder],
+      tags: [
+        tags.Full_stack,
+        tags.Unity,
+        tags.Csharp,
+        tags.php,
+        tags.javascript,
+        tags.sql,
+        tags.html,
+        tags.css,
+        tags.uxui,
+      ],
       // Unity, C#, APIS, PHP, JavaScript, VR, Full-Stack
     },
 
@@ -93,7 +103,14 @@ const projectInfo = [
       title: "HeyIWantedToDoThat! App",
       description:
         "Proyecto creado para facilitar la organización de las tareas pendientes y ayuda al mantenimiento de objetivos diarios",
-      tags: [tags.placeholder],
+      tags: [
+        tags.angular,
+        tags.css,
+        tags.typescript,
+        tags.html,
+        tags.Front_end,
+        tags.uxui,
+      ],
       // Angular, Css, TypeScript, HTML, Android, Front-End,
     },
 
@@ -136,15 +153,15 @@ const projectInfo = [
   {
     card: {
       image: "https://via.placeholder.com/400x250",
-      title: "Sistema de mensajería",
+      title: "Sistema de mensajería online",
       description:
         "En este proyecto, se desarrolló una arquitectura de cliente-servidor concurrente para un sistema de mensajería",
-      tags: [tags.placeholder],
+      tags: [tags.Cplusplus, tags.pyhton, tags.uxui],
       //C++, Python, UX
     },
 
     details: {
-      title: "Details_Title",
+      title: "Sistema de mensajería online tipo WhatsApp",
       content: (
         <>
           <p>
@@ -172,7 +189,7 @@ const projectInfo = [
       title: "Juego de Supervivencia",
       description:
         "Videojuego desarrollado para Android VR donde el jugador debe de sobrevivir el máximo tiempo posible oleadas de zombis!",
-      tags: [tags.placeholder],
+      tags: [tags.Unity, tags.Csharp],
       //Unity, Android, VR, State Machine, IA
     },
 
@@ -205,7 +222,7 @@ const projectInfo = [
       image: "https://via.placeholder.com/400x250",
       title: "Blind Date",
       description: "Página web de citas con un giro, te emparejan tus amigos!",
-      tags: [tags.placeholder],
+      tags: [tags.Full_stack, tags.SQL, tags.php, tags.css, tags.javascript],
       //PHP, CSS, JavaScript, SQL, Full-Stack,
     },
 
@@ -235,7 +252,7 @@ const projectInfo = [
       image: "https://via.placeholder.com/400x250",
       title: "Chatbot Agenda",
       description: "Chatbot de Telegram que te ayuda a organizar tus estudios",
-      tags: [tags.placeholder],
+      tags: [tags.nodered, tags.java],
       // Low-Code, APIS, Java
     },
 

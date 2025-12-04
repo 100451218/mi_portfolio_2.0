@@ -94,3 +94,47 @@ h2 {
   transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
+
+@import "./styles/theme.css";
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.card {
+  background: var(--color-surface);
+  color: var(--color-text);
+  border-radius: 12px;
+  padding: 1rem;
+  border: 1px solid var(--color-secondary);
+  transition: background 0.25s ease, color 0.25s ease, border 0.25s ease;
+}
+
+/* Scrollbar vertical */
+#detalle-proyectos div.scrollable {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 10px; /* espacio para la scrollbar */
+}
+
+/* Para navegadores basados en Webkit (Chrome, Edge, Safari) */
+#detalle-proyectos div.scrollable::-webkit-scrollbar {
+  width: 8px; /* grosor */
+}
+
+#detalle-proyectos div.scrollable::-webkit-scrollbar-track {
+  background: #f0f0f0; /* color de fondo de la barra */
+  border-radius: 4px;
+}
+
+#detalle-proyectos div.scrollable::-webkit-scrollbar-thumb {
+  background-color: var(--color-secondary); /* color del “thumb” */
+  border-radius: 4px;
+  border: 2px solid #f0f0f0; /* borde alrededor */
+}
+
+#detalle-proyectos div.scrollable::-webkit-scrollbar-thumb:hover {
+  background-color: #0056b3; /* hover */
+}

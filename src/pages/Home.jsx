@@ -167,17 +167,18 @@ export default function Home() {
           style={{
             display: "grid",
             gap: "20px",
-            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 400px))",
           }}
         >
           <AnimatePresence>
             {filteredProjects.map((proj, index) => (
               <motion.div
-                key={proj.card.title}
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.25 }}
+                key={proj.card.title} // o un id único
+                layout // Permite animar el cambio de posición en el grid
+                initial={{ opacity: 0, y: -20 }} // Aparece desde arriba
+                animate={{ opacity: 1, y: 0 }} // A su posición normal
+                exit={{ opacity: 0, y: 30 }} // Desaparece bajando
+                transition={{ type: "spring", stiffness: 300, damping: 25 }}
               >
                 <ProjectCard
                   {...proj.card}

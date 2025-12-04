@@ -24,8 +24,12 @@ const ProjectDetails = forwardRef(({ projects }, ref) => {
               borderRadius: "8px",
               border: "none",
               cursor: "pointer",
-              background: idx === activeIndex ? "#007bff" : "#eaeaea",
-              color: idx === activeIndex ? "#fff" : "#111",
+              background:
+                idx === activeIndex
+                  ? "var(--color-primary)"
+                  : "var(--color-surface)",
+              color:
+                idx === activeIndex ? "var(--color-bg)" : "var(--color-text)",
               fontWeight: idx === activeIndex ? "600" : "500",
               transition: "0.2s",
             }}
@@ -42,9 +46,11 @@ const ProjectDetails = forwardRef(({ projects }, ref) => {
           maxHeight: "400px",
           overflowY: "auto",
           padding: "20px",
-          background: "#fff",
+          background: "var(--color-surface)",
           borderRadius: "12px",
           boxShadow: "0 4px 16px rgba(0,0,0,0.08)",
+          color: "var(--color-text)",
+          transition: "0.25s",
         }}
       >
         <h3
@@ -52,6 +58,7 @@ const ProjectDetails = forwardRef(({ projects }, ref) => {
             fontSize: "1.5rem",
             fontWeight: "700",
             marginBottom: "10px",
+            color: "var(--color-primary)",
           }}
         >
           {projects[activeIndex].details.title}

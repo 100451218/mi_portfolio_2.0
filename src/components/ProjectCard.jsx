@@ -74,7 +74,12 @@ export default function ProjectCard({
               transition: "0.25s ease",
             }}
           >
-            <span>{tag.icon}</span> {tag.name}
+            <img
+              src={tag.icon}
+              alt={tag.name}
+              style={{ width: "18px", height: "18px" }}
+            />
+            {tag.name}
           </div>
         ))}
       </div>

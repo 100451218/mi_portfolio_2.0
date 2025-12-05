@@ -6,6 +6,7 @@ export default function ThemeToggle() {
 
   return (
     <button
+      class="ThemeToggleButton"
       onClick={toggleTheme}
       style={{
         padding: "8px 12px",

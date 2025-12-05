@@ -1,4 +1,5 @@
 import React, { useState, forwardRef, useImperativeHandle } from "react";
+import "../styles/ProjectDetails.css";
 
 const ProjectDetails = forwardRef(({ projects }, ref) => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -8,31 +9,14 @@ const ProjectDetails = forwardRef(({ projects }, ref) => {
   }));
 
   return (
-    <div style={{ display: "flex", gap: "20px", marginTop: "40px" }}>
+    <div className="project-details-container">
       {/* MENÚ LATERAL */}
-      <div
-        style={{ display: "flex", flexDirection: "column", minWidth: "200px" }}
-      >
+      <div className="project-menu">
         {projects.map((proj, idx) => (
           <button
             key={idx}
             onClick={() => setActiveIndex(idx)}
-            style={{
-              padding: "12px",
-              marginBottom: "8px",
-              textAlign: "left",
-              borderRadius: "8px",
-              border: "none",
-              cursor: "pointer",
-              background:
-                idx === activeIndex
-                  ? "var(--color-primary)"
-                  : "var(--color-surface)",
-              color:
-                idx === activeIndex ? "var(--color-bg)" : "var(--color-text)",
-              fontWeight: idx === activeIndex ? "600" : "500",
-              transition: "0.2s",
-            }}
+            className={idx === activeIndex ? "active" : ""}
           >
             {proj.details.title}
           </button>
@@ -40,20 +24,7 @@ const ProjectDetails = forwardRef(({ projects }, ref) => {
       </div>
 
       {/* CONTENIDO DETALLADO */}
-      <div
-        className="scrollable"
-        style={{
-          flex: 1,
-          maxHeight: "400px",
-          overflowY: "auto",
-          padding: "20px",
-          background: "var(--color-surface)",
-          borderRadius: "12px",
-          boxShadow: "0 4px 16px rgba(0,0,0,0.08)",
-          color: "var(--color-text)",
-          transition: "0.25s",
-        }}
-      >
+      <div className="scrollable project-content">
         <h3
           style={{
             fontSize: "1.5rem",
